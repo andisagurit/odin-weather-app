@@ -1,0 +1,151 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,300;0,400;0,600;0,700;0,900;1,300;1,400;1,600;1,700;1,900&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+html {
+    min-height: 100%;
+}
+
+body {
+    min-height: 100vh;
+    color: #1e2432;
+    background-image: url('../dist/images/background.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+#header {
+    width: 100%;
+    height: auto;
+    color: #1e2432;
+    padding: 20px 30px;
+}
+
+.headline {
+    font-weight: bold;
+    font-size: 40px;
+}
+
+#container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 30px;
+}
+
+#searchForm {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 30%;
+}
+
+input {
+    border: none;
+    background: #F1EDF2;
+    outline: none;
+    font-family: inherit;
+}
+
+input:focus {
+    outline: none;
+}
+
+input::placeholder {
+    color: #000000;
+    font-style: italic;
+}
+
+.input-city {
+    width: 100%;
+    height: 40px;
+    border-radius: 45px;
+    outline: 2px solid #000000;
+    border: none;
+    color: #000000;
+    padding-left: 25px;
+    font-size: 20px;
+}
+
+.search-button {
+    cursor: pointer;
+    max-width: 30px;
+    background-color: transparent;
+    position: relative;
+    right: 50px;
+}
+
+#content {
+    margin: 70px 0 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    grid-auto-rows: min-content;
+    grid-gap: 32px 30px;
+}
+
+.city {
+    text-align: left;
+    display: grid;
+    font-size: 18px;
+    padding: 40px 20px;
+    background: #fff;
+    color: #53627c;
+    border-radius: 20px;
+    box-shadow: 7px 5px 2px;
+}
+
+.div1 {
+    text-align: center;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.cityCountry {
+    font-size: 25px;
+    font-weight: bold;
+    padding-bottom: 15px;
+}
+
+.text {
+    padding-bottom: 5px;
+}
+
+.allTemps {
+    text-align: center;
+    align-items: center;
+    font-size: 65px;
+    margin-bottom: 20px;
+}
+
+.div2 {
+    text-align: center;
+    align-items: center;
+}
+
+/* media queries */
+@media (max-width: 768px) {
+    #searchForm {
+        width: 100%;
+    }
+}
+
+@media (max-width: 425px) {
+    .input-city {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 375px) {
+    .heading {
+        font-size: 50px;
+    }
+
+    .input-city {
+        font-size: 18px;
+    }
+}
